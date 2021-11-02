@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --Very-light-pink: #C7C7C7;
+                --Text-input-field: #F7F7F7;
+                --Hospital-green: #ACD9B2;
+                --White: #FFFFFF;
+                --Black: #000000;
+                --Dark: #232830;
+
+                --sm: 14px;
+                --md: 16px;
+                --lg: 18px
+            }
+            *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            } 
+            body {
+                font-family: 'Quicksand', sans-serif;
+            }
+            .close {
+                display: none;
+            }
+            .slider-container {
+                width: 100%;
+                display: flex;
+                height: 360px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+            }
+            .slider-container::-webkit-scrollbar {
+                display: none;
+            }
+            .slider-container img {
+                width: 100%;
+                border-radius: 0 0 20px 20px;
+                object-fit: cover;
+                scroll-snap-align: center;
+            }
+            .slider-control {
+                display: flex;
+                justify-content: center;
+            }
+            .circle {
+                width: 8px;
+                height: 8px;
+                margin: 4px;
+                border-radius: 50%;
+                background-color: var(--Text-input-field);
+                cursor: pointer;
+            }
+            .circle_1 {
+                background-color: var(--Very-light-pink);
+            }
+            .product-info {
+                padding: 24px;
+            }
+            .product-price {
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+            .product-title {
+                margin-bottom: 16px;
+            }
+            .product-description {
+                margin-bottom: 36px;
+            }
+            .primary-button {
+                width: 100%;
+                height: 50px;
+                color: var(--White);
+                font-size: var(--md);
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                background-color: var(--Hospital-green);
+                cursor: pointer;
+            }
+            .add-to-cart-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .add-to-cart-button span {
+                margin-right: 8px;
+            }
+            @media (min-width: 600px) {
+                .product-detail {
+                    position: absolute;
+                    right: 0px;
+                    width: 360px;
+                    min-height: 100vh;
+                    box-shadow: 0px -1px 5px 0px var(--Very-light-pink);
+                }
+                .close {
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    padding: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: var(--White);
+                    cursor: pointer;
+                }
+                
+            }
+        </style>    
+    </head>
+    <body>
+        <aside class="product-detail">
+            <img src="./assets/icons/icon_close.png" alt="close" class="close">
+            <div class="product-slider">
+                <div class="slider-container">
+                    <img src="./assets/image/bikes.jpeg" alt="Bikes">
+                    <img src="./assets/image/bikes.jpeg" alt="Bikes">
+                    <img src="./assets/image/bikes.jpeg" alt="Bikes">
+                </div>
+                <div class="slider-control">
+                        <div class="circle circle_1"></div>
+                        <div class="circle circle_2"></div>
+                        <div class="circle circle_3"></div>
+                </div>
+            </div>
+            <div class="product-info">
+                <p class="product-price">$ 120,00</p>
+                <p class="product-title">Retro refrigerator</p>
+                <p class="product-description">With its funcional and practical interior, this refrigerator also fulfills a decorative functio, adding personality and a retro-vintage aesthetic to your kitchen or workplace.</p>
+                <button class="primary-button add-to-cart-button"><span><img src="./assets/icons/bt_add_to_cart.svg" alt=""></span> Add to cart</button>
+            </div>
+
+        </aside>
+    </body>
+</html>

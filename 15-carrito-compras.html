@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --Very-light-pink: #C7C7C7;
+                --Text-input-field: #F7F7F7;
+                --Hospital-green: #ACD9B2;
+                --White: #FFFFFF;
+                --Black: #000000;
+                --Dark: #232830;
+
+                --sm: 14px;
+                --md: 16px;
+                --lg: 18px
+            }
+            *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            } 
+            body {
+                font-family: 'Quicksand', sans-serif;
+            }
+            .product-detail {
+                padding: 12px;
+            }
+            .title-container {
+                display: none;
+            }
+            .shopping-cart {
+                display: flex;
+                align-items: center;
+                padding: 12px 0 12px 0;
+            }
+            .shopping-cart figure img {
+                width: 70px;
+                height: 70px;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+            .shopping-cart div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 12px;
+            }
+            .shopping-cart div p:nth-child(1) {
+                color: var(--Very-light-pink);
+            }
+            .shopping-cart div p:nth-child(2) {
+                margin-left: 8px;
+                font-weight: bold;
+            }
+            .shopping-cart span {
+                padding: auto;
+                margin-left: 12px;
+            }
+
+            .my-order-container {
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                width: 300px;
+            }
+            .my-order-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px;
+                border-radius: 12px;
+                background-color: var(--Text-input-field);
+            }
+            .my-order-content  p {
+                font-size: var(--md);
+                font-weight: bold;
+            }
+            .primary-button {
+                width: 100%;
+                height: 50px;
+                color: var(--White);
+                font-size: var(--md);
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                background-color: var(--Hospital-green);
+                cursor: pointer;
+            }
+            .add-to-cart-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 16px;
+            }
+            .add-to-cart-button span {
+                margin-right: 8px;
+            }
+            @media (min-width: 600px) {
+                .product-detail {
+                    position: absolute;
+                    right: 0px;
+                    width: 360px;
+                    min-height: 100vh;
+                    border-radius: 10px 0 0 10px;
+                    box-shadow: 0px -1px 5px 0px var(--Very-light-pink);
+                }
+                .title-container {
+                    display: flex;
+                    align-items: center;
+                    margin: 12px 0;
+                }
+                .title-container p {
+                    font-size: var(--lg);
+                    font-weight: bold;
+                }  
+                .title-container img{
+                    margin-right: 14px;
+                    width: 24px;
+                    transform: rotate(180deg);
+                }
+            }
+        </style>   
+    </head>
+    <body>
+        <aside class="product-detail">
+            <div class="title-container">
+                <img src="./assets/icons/black.svg" alt="array">
+                <p class="title">My order</p>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="./assets/image/bikes.jpeg" alt="bikes">
+                </figure>
+                <div>
+                    <p>Bikes</p>
+                    <p>$30.00<span><img src="./assets/icons/icon_close.png" alt=""></span></p>
+                </div>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="./assets/image/bikes.jpeg" alt="bikes">
+                </figure>
+                <div>
+                    <p>Bikes</p>
+                    <p>$30.00<span><img src="./assets/icons/icon_close.png" alt=""></span></p>
+                </div>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="./assets/image/bikes.jpeg" alt="bikes">
+                </figure>
+                <div>
+                    <p>Bikes</p>
+                    <p>$30.00<span><img src="./assets/icons/icon_close.png" alt=""></span></p>
+                </div>
+            </div>
+            <button class="primary-button add-to-cart-button">
+                <span>
+                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                </span>
+                Add to cart
+            </button>
+        </aside>
+    </body>
+</html>
